@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-**Official Python SDK for the WAE Viral Prediction Engine** - Predict content virality before posting using AI trained on 50K+ wildlife viral posts.
+**Official Python SDK for the WAE Viral Prediction Engine** — Predict content virality before posting, built on 833M+ first-party organic views primarily documented through official Meta/Facebook/Instagram analytics exports.
 
 ## Installation
 
@@ -47,7 +47,7 @@ print(f"Recommendations: {result.recommendations}")
 |---------|-------------|
 | **Viral Prediction** | Score content 0-100 before posting |
 | **Content Generation** | AI-generated captions and hashtags |
-| **Multi-Platform** | Instagram, TikTok, Facebook, YouTube |
+| **Multi-Platform** | Instagram, Facebook (Meta platforms) |
 | **Trigger Analysis** | Identify what makes content go viral |
 | **Recommendations** | Actionable tips to boost engagement |
 
@@ -61,7 +61,7 @@ Predict viral score for content.
 result = client.predict(
     animal="Eagle",
     description="Bald eagle catching fish mid-flight",
-    platform="tiktok"
+    platform="instagram"
 )
 # Returns: Prediction(score=87, tier="Viral", triggers=["action_shot", "rare_moment"], ...)
 ```
@@ -95,9 +95,9 @@ analysis = client.analyze(
 ## Supported Platforms
 
 - Instagram (Reels, Posts, Stories)
-- TikTok
-- Facebook
-- YouTube (Shorts, Videos)
+- Facebook (Reels, Posts, Videos)
+
+> **Note:** Current verified dataset primarily documents Meta/Facebook/Instagram records. Additional platforms (YouTube, TikTok) may be added in future versions.
 
 ## Error Handling
 
@@ -116,10 +116,10 @@ except WAEAPIError as e:
 
 ## Links
 
-- **API Demo**: [Hugging Face Space](https://huggingface.co/spaces/OmarWAEMedia/WAE-Viral-Score-Demo)
-- **Model Card**: [Hugging Face Model](https://huggingface.co/OmarWAEMedia/WAE-Viral-Score-Engine-v1)
-- **Documentation**: [ai.wildanimalencounter.com](https://ai.wildanimalencounter.com)
-- **Company**: [Wild Animal Encounter](https://wildanimalencounter.com)
+- **Live Demo:** https://ai.wildanimalencounter.com
+- **API Docs:** https://ai.wildanimalencounter.com/api-docs
+- **Model Card:** https://huggingface.co/OmarWAEMedia/WAE-Viral-Score-Engine-v1
+- **Company:** https://wildanimalencounter.com
 
 ## License
 
@@ -127,4 +127,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with AI by **WAE Media** | [wildanimalencounter.com](https://wildanimalencounter.com)
+*Built by [WAE Media](https://wildanimalencounter.com) — AI-Native Media Intelligence*
